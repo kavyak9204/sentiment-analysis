@@ -1,11 +1,17 @@
  
+import unittest
 from sentiment import analyze_sentiment
 
-def test_positive():
-    assert analyze_sentiment("I love this product!") == "Positive"
+class TestSentimentAnalysis(unittest.TestCase):
+    def test_positive(self):
+        self.assertEqual(analyze_sentiment("I love this product!"), "Positive")
 
-def test_negative():
-    assert analyze_sentiment("This is the worst experience ever.") == "Negative"
+    def test_negative(self):
+        self.assertEqual(analyze_sentiment("This is the worst experience ever."), "Negative")
 
-def test_neutral():
-    assert analyze_sentiment("It's okay, not great.") == "Neutral"
+    def test_neutral(self):
+        self.assertEqual(analyze_sentiment("It's okay, not great."), "Neutral")
+
+if __name__ == "__main__":
+    unittest.main()
+

@@ -26,4 +26,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest test_sentiment.py
+          run: python -m unittest discover -v

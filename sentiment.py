@@ -14,7 +14,8 @@ def analyze_sentiment(text):
         return "Negative"
     else:
         return "Neutral"
+
 if __name__ == "__main__":
     user_input = input("Enter text to analyze sentiment: ")
-    result = analyze_sentiment("I am very happy today!")
-    print("Sentiment:", result)
+    result = analyze_sentiment(user_input)  # <-- Use user's input
+    print("Sentiment:", result)             # <-- Removed comma
